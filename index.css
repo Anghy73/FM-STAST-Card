@@ -1,0 +1,149 @@
+:root {
+    --main--background-color:  #090b1a;
+    --card--background-color:  #1b1938;
+    --accent-color: #aa5cdb;
+
+    --main--stats-color: #ffffff;
+    --main--paragraph-color: #ffffffbf;
+    --stat--headings-color: #ffffff99;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    /* display: grid;
+    grid-template-columns: 100%; */
+    width: 100%;
+    padding: 65px 25px;
+    background-color: var(--main--background-color);
+    /* background-color: rgb(88, 88, 88); */
+    color: white;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    background-color: var(--card--background-color);
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.container-img {
+    width: 100%;
+    height: 239px;
+    background-image: url('./images/image-header-mobile.jpg');
+    background-color: var(--accent-color);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.container_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 0px 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 30px 0px 15px 0px;
+    font-size: 2.3rem;
+    font-weight: 700;
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--main--stats-color);
+}
+
+span {
+    color: var(--accent-color);
+}
+
+p {
+    margin-bottom: 40px;
+    color: var(--main--paragraph-color);
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+.container_content--stats h2, h3, h4 {
+    font-size: 2.1rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.container_content--stats p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+    color: var(--main--paragraph-color);
+    letter-spacing: 2px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 200;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(207, 100%, 50%); }
+
+@media (min-width: 376px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container {
+        display: flex;
+        flex-direction: row-reverse;
+        max-width: 1079px;
+    }
+    .container-img {
+        background-size:cover ;
+        height: auto;
+    }
+	.container_content {
+		margin: 40px;
+		display: flex;
+		align-items: flex-start;
+	}
+	.container_content h1 {
+		width: 390px;
+		text-align: justify;
+		font-size: 3.3rem;
+		font-weight: 700;
+		margin-bottom: 2rem;
+		font-family: 'Inter', sans-serif;
+	}
+	.container_content > p {
+		width: 300px;
+		text-align: left;
+		margin-bottom: 6rem;
+	}
+	.container_content--stats {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 300px;
+	}
+	.container_content--stats div {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
